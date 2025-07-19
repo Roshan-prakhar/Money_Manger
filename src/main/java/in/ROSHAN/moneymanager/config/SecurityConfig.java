@@ -1,6 +1,6 @@
 package in.ROSHAN.moneymanager.config;
 
-import in.ROSHAN.moneymanager.security.JwtRequestFilter;
+ import in.ROSHAN.moneymanager.security.JwtRequestFilter;
 import in.ROSHAN.moneymanager.service.AppUserDetailsService;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
