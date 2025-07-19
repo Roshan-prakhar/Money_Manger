@@ -6,6 +6,7 @@ import in.ROSHAN.moneymanager.service.IncomeService;
 import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,6 +16,7 @@ import java.io.IOException;
 @RestController
 @RequestMapping("/excel")
 @RequiredArgsConstructor
+@CrossOrigin
 public class ExcelController {
 
     private final ExcelService excelService;
