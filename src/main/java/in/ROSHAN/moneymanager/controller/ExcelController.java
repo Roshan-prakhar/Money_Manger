@@ -16,7 +16,6 @@ import java.io.IOException;
 @RestController
 @RequestMapping("/excel")
 @RequiredArgsConstructor
-@CrossOrigin
 public class ExcelController {
 
     private final ExcelService excelService;
