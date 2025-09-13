@@ -53,10 +53,29 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOriginPatterns(List.of("*"));
-        configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
-        configuration.setAllowedHeaders(List.of("Authorization","Content-Type", "Accept"));
+        configuration.setAllowedOriginPatterns(List.of(
+            "https://moneymanager-frontend.onrender.com",
+            "https://*.onrender.com",
+            "http://localhost:5173",
+            "http://localhost:3000",
+            "http://127.0.0.1:5173"
+        ));
+        configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"));
+        configuration.setAllowedHeaders(List.of(
+            "Authorization", 
+            "Content-Type", 
+            "Accept", 
+            "X-Requested-With",
+            "Origin",
+            "Access-Control-Request-Method",
+            "Access-Control-Request-Headers"
+        ));
+        configuration.setExposedHeaders(List.of(
+            "Access-Control-Allow-Origin",
+            "Access-Control-Allow-Credentials"
+        ));
         configuration.setAllowCredentials(true);
+        configuration.setMaxAge(3600L);
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);
         return source;
