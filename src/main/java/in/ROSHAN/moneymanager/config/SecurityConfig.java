@@ -54,6 +54,7 @@ public class SecurityConfig {
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
         configuration.setAllowedOriginPatterns(List.of(
+            "https://money-manger-webapp.onrender.com",
             "https://moneymanager-frontend.onrender.com",
             "https://*.onrender.com",
             "http://localhost:5173",

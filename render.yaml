@@ -23,7 +23,7 @@ services:
       - key: JWT_SECRET
         generateValue: true
       - key: MONEY_MANAGER_FRONTEND_URL
-        value: https://moneymanager-frontend.onrender.com
+        value: https://money-manger-webapp.onrender.com
       - key: APP_ACTIVATION_URL
         value: https://moneymanager-backend.onrender.com/
 
