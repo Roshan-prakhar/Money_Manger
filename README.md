@@ -3,45 +3,54 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/Roshan-prakhar/Money_Manger)
 ![GitHub stars](https://img.shields.io/github/stars/Roshan-prakhar/Money_Manger?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/Roshan-prakhar/Money_Manger?style=social)
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![License](https://img.shields.io/github/license/Roshan-prakhar/Money_Manger)
 
-A **simple and efficient money management application** to track income, expenses, and savings.  
-Helps users stay on top of their finances with **categorized transactions, budgets, and insights**.
+**Money Manager** is a full-stack application designed to help users **track, analyze, and optimize their personal finances**.  
+It provides a clean and user-friendly interface to record **income, expenses, and savings**, along with powerful **budgeting tools and insights**.  
 
----
-
-## ✨ Features
-
-- ➕ Add, update, and delete transactions  
-- 📊 Categorize income & expenses  
-- 💵 Monthly/weekly budget tracking  
-- 📈 Expense analytics with charts  
-- 🔎 Search & filter transactions  
-- 🗂️ Export data (CSV/Excel) *(optional if implemented)*  
-- 🖥️ Clean and responsive UI  
+Whether you’re a student managing pocket money, a working professional budgeting monthly expenses, or just someone who wants to visualize financial habits — this app is built for you.
 
 ---
 
-## ⚙️ Tech Stack
+## ✨ Key Features
 
-- **Frontend:** React.js / HTML / CSS *(adjust if different)*  
-- **Backend:** Spring Boot (Java) *(or Node/other if different)*  
-- **Database:** H2 / MySQL / SQLite  
-- **Other Tools:** Chart.js / Tailwind CSS / Docker *(if used)*  
+### 📝 Transaction Management
+- Add income and expenses with description, category, and date  
+- Edit or delete existing transactions  
+- Categorize transactions (Food, Travel, Shopping, Bills, Salary, etc.)  
+
+### 📊 Budget & Analytics
+- Set monthly or custom budgets  
+- Track spending against budgets  
+- Visual reports and charts for income vs. expenses  
+
+### 📈 Insights
+- Daily, weekly, and monthly breakdowns  
+- Category-wise expense distribution (Pie/Bar charts)  
+- Trend analysis over time  
+
+### 💾 Data Management
+- Local database for fast access  
+- Export data to CSV/Excel (if implemented)  
+- Option to reset or archive old records  
+
+### 🖥️ UI/UX
+- Minimalist and responsive design  
+- Mobile-friendly interface  
+- Dark/Light theme (if implemented)  
 
 ---
 
-## 📥 Installation & Setup
+## 🏗️ Architecture
 
-```bash
-# Clone the repo
-git clone https://github.com/Roshan-prakhar/Money_Manger.git
+- **Frontend:** React.js (components for Dashboard, Add Transaction, Analytics, etc.)  
+- **Backend:** Spring Boot REST APIs for transaction handling, budgets, and reporting  
+- **Database:** H2/MySQL for storing transactions, categories, and budgets  
+- **Visualization:** Chart.js / Recharts for analytics  
+- **Deployment:** Docker-ready setup (optional)  
 
-# Backend setup
-cd backend
-mvn spring-boot:run
-
-# Frontend setup
-cd frontend
-npm install
-npm run dev
+```mermaid
+flowchart TD
+  User[User Interface] --> |React.js| Frontend[Frontend App]
+  Frontend --> |REST API| Backend[Spring Boot Backend]
+  Backend --> |JPA Queries| DB[(Database: H2/MySQL)]
